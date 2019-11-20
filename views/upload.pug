@@ -1,0 +1,64 @@
+doctype html
+html
+  head
+   link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+
+   link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css')
+   link(rel='stylesheet', href='/stylesheets/style.css')
+   link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.5.0/css/all.css", integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" ,crossorigin="anonymous")
+   link(href="https://fonts.googleapis.com/css?family=Raleway" ,rel="stylesheet")
+   meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+   title Upload to DLCloud
+
+  body
+    block content
+      .container
+        .row
+        .col.s12
+            nav 
+              .logo
+                img(src="/images/DL-Cloud2_opt.png", alt="", id="logo") 
+              .up
+                p#h Upload your photos
+              
+            x.nav-wrapper
+              span.flow-text 
+              a(href='/', id = "home") 
+                i(class="fas fa-home")  GO HOME
+
+        
+        form(action='#' method="POST" enctype="multipart/form-data")
+          .row
+            .col.s12
+              if msg ==1
+                .success
+                  | Photo uploaded successfully
+              else if msg == 2
+                .error
+                  | File size too large
+              else if msg == 3
+                .error
+                  | Invalid file type. Only JPG, PNG or GIF file are allowed.      
+          .row
+            .col.s12 
+              .file-field.input-field
+                .btn.grey
+                  span File
+                  input(type='file' name="photo" required)
+                .file-path-wrapper
+                  input.file-path.validate(type='text' )
+          .row
+          .input-field.col.s12
+            input#caption.validate(type='text' name="caption")
+            label(for='caption') Caption 
+          
+          .row
+            .col.s12 
+              button.btn.waves-effect.waves-light(type='submit', name='action')
+                | Upload
+                i.material-icons.right send
+          
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js')
+      

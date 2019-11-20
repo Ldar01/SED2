@@ -1,0 +1,14 @@
+extends layout
+
+block content
+      .container
+       form(action='#' method='POST').form-signin
+          h2.form-signin-heading Logeate! 
+          label.sr-only(for='username') Username
+          input#username.form-control(type='text' name='username' required='' placeholder='Tu Usuario' autofocus='')
+          label.sr-only(for='correo') Email address
+          input#email.form-control(type='email' name='email' required='' placeholder='00000000@uca.edu.sv' )
+          label.sr-only(for='contra') Password
+          input#password.form-control(type='password' name='password' required='' placeholder='Escribe tu contraseña')
+          input#iniciar.btn.btn-lg.btn-primary.btn-block(type='submit' value='Iniciar')
+      

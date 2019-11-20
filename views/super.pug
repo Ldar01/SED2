@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  if(!user || user._id != '5c00b810db4fa92316f942a5')
+
+    h1 Usuario no autorizado
+    a(href="/", id= "home") GO HOME
+  else
+    .errors
+      h1 USUARIOS #{title}
+    form(action="#", method="post" name="postForm")
+      label(for="username") Username
+      input#username(type="text" name="username") 
+      label(for="email") Email
+      input#email(type="text" name="email")
+      label(for="password") Password
+      input#password(type="text" name="password")  
+      input(type="submit", value="Enviar")
+    table 
+      thead
+        th id
+        th
+        th name
+        th
+        th Email
+        th
+        th Opciones 
+      tbody.posts 
+  script(src="/js/main.js")

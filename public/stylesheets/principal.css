@@ -1,0 +1,46 @@
+.inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hola{
+    display: inherit;
+    width: 17vw;
+    justify-content: space-around;
+}
+
+.portada{
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 73vh;
+}
+
+.container{
+    width: 88vw;
+}
+
+#fotop{
+    height: 100%;
+    width: 100%;
+}
+
+.info{
+    font-family: 'Signika Negative', sans-serif;
+    padding: 5%;
+    background-color: rgba(141, 141, 141, 0.5);
+
+}
+
+#dl{
+    font-size: 1.5em;
+}
+
+#home{
+    text-decoration:  none;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(11, 49, 119);
+    border-radius: 1em;
+    color: white;
+    padding: 1%;
+}

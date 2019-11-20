@@ -1,0 +1,57 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='description' content='')
+    meta(name='author' content='')
+    title DLCloud
+    // Bootstrap core CSS
+    link(href='/dist/css/bootstrap.min.css' rel='stylesheet')
+    link(href='/assets/css/ie10-viewport-bug-workaround.css' rel='stylesheet')
+    link(rel="stylesheet", href="/stylesheets/principal.css")
+    link(href="https://fonts.googleapis.com/css?family=Signika+Negative", rel="stylesheet")
+    link(href='/cover.css' rel='stylesheet')
+    script(src='/assets/js/ie-emulation-modes-warning.js')
+    
+  .site-wrapper
+    .site-wrapper-inner
+      .cover-container
+        .masthead.clearfix
+          .inner
+            .hola
+              img(src="/images/DL-Cloud2_opt.png", alt="", id="logo")
+              h3.masthead-brand DLCloud
+            nav
+              ul.nav.masthead-nav
+                if (!user)
+                  li
+                    a(href='/login') Login
+                    
+                  li
+                    a(href='/register') Register
+                if (user)
+                  li
+                    a#welcome Welcome #{user.username}
+                  li
+                    a(href='/logout') Logout
+                  if(user.username!="admin")
+                    li
+                      a(href='/upload') Upload your files
+                  else
+                    li
+                      a(href='/super') Administrar
+                  
+                  
+                
+  block content
+  
+
+  //
+    Bootstrap core JavaScript
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+  script.
+    window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\\/script>')
+  script(src='/dist/js/bootstrap.min.js')
+  // IE10 viewport hack for Surface/desktop Windows 8 bug
+  script(src='/assets/js/ie10-viewport-bug-workaround.js')

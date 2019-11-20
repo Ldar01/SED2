@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/DLCloud/css/style-index.css">
+    <title>DL Cloud</title>
+    <link rel="stylesheet" href="css/style-index.css">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <img src="images/DL-Cloud2.0 (Dark).png" alt="" id="logo">
+        <form action="#" method="POST">
+            <fieldset>
+                <label for="correo">Correo Electronico: </label>
+                <input type="email" name="correo" id="correo" required placeholder="00000000@uca.edu.sv">
+                <label for="contra">Contraseña: </label>
+                <input type="password" name="contra" id="contra" required placeholder="Escribe tu contraseña" pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"> 
+                <!--La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.
+                Puede tener otros símbolos.-->
+                <input type="submit" value="Iniciar" id="iniciar">
+            </fieldset>
+        </form>
+    </nav>
+    <section>
+        <div class="Content">
+            <div class="registro">
+                <form action="#" method="POST" id="registro1">
+                    <fieldset class="registro2">
+                        <h1>¿No te has registrado?</h1>
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" name="nombre" id="nombre_re" required placeholder="Jose David">
+                        <label for="correo">Correo Electronico: </label>
+                        <input type="email" name="correo" id="correo_re" required placeholder="00000000@uca.edu.sv">
+                        <label for="contra">Contraseña: </label>
+                        <input type="password" name="contra" id="contra_re" required placeholder="Escribe tu contraseña" pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"> 
+                        <!--La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.
+                        Puede tener otros símbolos.-->
+                        <input type="submit" value="Registrate" id="Registrate">
+                    </fieldset>
+                </form>
+            </div>
+            <div class="info">
+                <h1>La mejor manera de guardar todos tus archivos</h1>
+                <p id="dl">DL Cloud te permite guardar tus archivos sin ningun problema, ya sea
+                    Documentos, PDF, Fotografias, Videos y mas!.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>hola</p>
+    </footer>
+</body>
+</html>

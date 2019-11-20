@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    .container
+      if(!user || user._id == '5c00b810db4fa92316f942a5')
+        .portada
+          .info
+              h1 La mejor manera de guardar todas tus imagenes
+              p#dl
+                | DL Cloud te permite guardar tus imagenes sin ningun problema, ya sea
+                | en formato JPG, JPEG, PNG e incluso GIF!.
+          .fondo
+              img(src="/images/foto7.jpg", alt="", srcset="", id = "fotop")
+      else
+        if photolist.length
+          | <div class="row">
+          each pic, index in photolist
+            <div class ="col s3"><img src = #{pic['path']} alt="image" class="responsive-img" /><p class="center-align caption">#{pic['caption']}</p></div> 
+            if (((index+1) % 4) == 0 )
+            </div><div class="row">
+        else
+          .row
+            .col.s12
+              .caption No photos uploaded yet.
+    
+
+     
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js')

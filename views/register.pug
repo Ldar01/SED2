@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .container(style = "display: flex; justify-content: center")
+    form.resgistro(role='form', action="/register",method="post", style='max-width: 300px;')
+      h2.form-signin-heading Registrate Aqui
+      input#name(type='text', name="username", placeholder='Tu nombre', style="font-size: 1em ;padding: 10px; color:gray ; width: 100%")
+      input#email(type='text', name="email", placeholder='00000000@uca.edu.sv' style="padding: 10px; color:gray ; width: 100%")
+      input#password(type='password', name="password", placeholder='Tu contraseña' style="padding: 10px; color:gray ; width: 100%")
+      button#registrate(type='submit', style = "background-color: #337ab7; color: white; border: 1px solid #337ab7; width: 100%; padding: 10px ; margin: 10px 0 0 0;") Registrarse
+      
